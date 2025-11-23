@@ -1,5 +1,8 @@
 import type { Route } from '.react-router/types/app/+types/root';
-import '@/css/dashboard.css'
+import { AppHeader } from '@/components/dashboard/app-header';
+import { AppSidebar } from '@/components/dashboard/app-sidebar';
+import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar';
+import '@/css/dashboard.css';
 import { Outlet } from 'react-router';
 
 export const links: Route.LinksFunction = () => [
@@ -16,5 +19,19 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export default function DashboardLayout() {
-	return <Outlet/>
+	return (
+		<div className="[--header-height:calc(--spacing(14))]">
+			<SidebarProvider className="flex flex-col">
+				<AppHeader />
+				<div className="flex flex-1">
+					<AppSidebar />
+					<SidebarInset>
+						<div className="flex flex-1 flex-col gap-4 p-4">
+							<Outlet />
+						</div>
+					</SidebarInset>
+				</div>
+			</SidebarProvider>
+		</div>
+	);
 }
