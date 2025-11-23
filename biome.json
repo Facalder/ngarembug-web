@@ -6,7 +6,8 @@
 		"useIgnoreFile": true
 	},
 	"files": {
-		"ignoreUnknown": false
+		"ignoreUnknown": false,
+		"includes": ["**", "!**/commitlint.config.js", "!**/.react-router"]
 	},
 	"formatter": {
 		"enabled": true,
