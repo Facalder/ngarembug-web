@@ -16,6 +16,7 @@ import {
 	useSidebar,
 } from '@/components/ui/sidebar';
 import type { SidebarData } from '@/features/dashboard/types/sidebar-type';
+import { Badge } from '@/components/ui/badge';
 
 export default function SidebarNavGroups({ data }: { data: SidebarData }) {
 	const location = useLocation();
@@ -25,7 +26,10 @@ export default function SidebarNavGroups({ data }: { data: SidebarData }) {
 		<>
 			{data.navGroups.map((group) => (
 				<SidebarGroup key={group.title}>
-					<SidebarGroupLabel>{group.title}</SidebarGroupLabel>
+					<SidebarGroupLabel className='flex justify-between'>
+						{group.title}
+						<span>{group.items.length}</span>
+					</SidebarGroupLabel>
 
 					<SidebarMenu>
 						{group.items.map((item) => {
@@ -62,7 +66,6 @@ export default function SidebarNavGroups({ data }: { data: SidebarData }) {
 										</Link>
 									</SidebarMenuButton>
 
-									{/* Single DropdownMenu per parent item; children shown inside the menu */}
 									<DropdownMenu>
 										<DropdownMenuTrigger asChild>
 											<SidebarMenuAction showOnHover>

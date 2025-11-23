@@ -23,7 +23,7 @@ export const user: User = {
 export const sidebarDataNavMain: NavItems[] = [
 	{
 		title: 'Home',
-		to: '/',
+		to: '/dashboard',
 		icon: Home,
 	},
 
@@ -33,8 +33,9 @@ export const sidebarDataNavMain: NavItems[] = [
 	},
 
 	{
-		title: 'Inbox',
+		title: 'Notifications',
 		icon: Inbox,
+		badge: 5,
 	},
 ];
 
