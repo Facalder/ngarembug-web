@@ -1,11 +1,11 @@
 import { Link, useLocation } from 'react-router';
+import { Badge } from '@/components/ui/badge';
 import {
 	SidebarMenu,
 	SidebarMenuButton,
 	SidebarMenuItem,
 } from '@/components/ui/sidebar';
 import type { NavItems } from '@/features/dashboard/types/sidebar-type';
-import { Badge } from '@/components/ui/badge';
 
 export default function SidebarNavMain({ data }: { data: NavItems[] }) {
 	const location = useLocation();
@@ -25,9 +25,7 @@ export default function SidebarNavMain({ data }: { data: NavItems[] }) {
 									{d.icon && <d.icon className="size-4" />}
 									<span>{d.title}</span>
 									{d.title === 'Notifications' && d.badge && (
-										<Badge className="ml-auto size-fit">
-											{d.badge}
-										</Badge>
+										<Badge className="ml-auto size-fit">{d.badge}</Badge>
 									)}
 								</Link>
 							</SidebarMenuButton>

@@ -5,8 +5,8 @@ import {
 	MapIcon,
 	Plus,
 	Search,
-	Store,
 	TagIcon,
+	Wifi,
 } from 'lucide-react';
 import type {
 	NavItems,
@@ -44,31 +44,48 @@ export const sidebarDataNavGroups: SidebarData = {
 		{
 			title: 'Collections',
 			items: [
+				// {
+				// 	title: 'Cafe',
+				// 	to: '/dashboard/collections/cafes',
+				// 	icon: Store,
+				// 	children: [
+				// 		{
+				// 			title: 'Cafe List',
+				// 			to: '/dashboard/collections/cafes',
+				// 			icon: Plus,
+				// 		},
+				// 		{
+				// 			title: 'Tambah Cafe Baru',
+				// 			to: '/dashboard/collections/cafes/new',
+				// 			icon: Plus,
+				// 		},
+				// 	],
+				// },
 				{
-					title: 'Cafe',
-					to: '/dashboard/collections/cafes',
-					icon: Store,
+					title: 'Kategori',
+					to: '/dashboard/collections/categories',
+					icon: TagIcon,
 					children: [
 						{
-							title: 'Cafe List',
-							to: '/dashboard/collections/cafes',
-							icon: Plus,
-						},
-						{
-							title: 'Tambah Cafe Baru',
-							to: '/dashboard/collections/cafes/new',
+							title: 'Kategori baru',
+							to: '/collections/categories/new',
 							icon: Plus,
 						},
 					],
 				},
 				{
-					title: 'Category',
-					to: '/dashboard/collections/categories',
-					icon: TagIcon,
+					title: 'Fasilitias',
+					to: '/dashboard/collections/facilities',
+					icon: Wifi,
 					children: [
 						{
-							title: 'Add Category',
-							to: '/collections/category/new',
+							title: 'Fasilitas baru',
+							to: '/dashboard/collections/facilities/new',
+							icon: Plus,
+						},
+						{
+							title: 'Fasilitas baru',
+							to: '/dashboard/collections/facilities/new',
 							icon: Plus,
 						},
 					],

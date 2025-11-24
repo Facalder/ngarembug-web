@@ -1,9 +1,9 @@
 import { Command } from 'lucide-react';
 import type * as React from 'react';
 import { Link } from 'react-router';
-import SidebarNavGroups from '@/components/dashboard/sidebar-nav-groups';
-import SidebarNavMain from '@/components/dashboard/sidebar-nav-main';
-import SidebarNavUser from '@/components/dashboard/sidebar-nav-user';
+import SidebarNavGroups from '@/components/sidebar-nav-groups';
+import SidebarNavMain from '@/components/sidebar-nav-main';
+import SidebarNavUser from '@/components/sidebar-nav-user';
 import {
 	Sidebar,
 	SidebarContent,
@@ -23,10 +23,10 @@ import {
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 	return (
 		<Sidebar
-			className="top-(--header-height) h-[calc(100svh-var(--header-height))]!"
+			className="top-(--header-height) h-[calc(100svh-var(--header-height))]! bg-background!"
 			{...props}
 		>
-			<SidebarHeader>
+			<SidebarHeader className="bg-background">
 				<SidebarMenu>
 					<SidebarMenuItem>
 						<SidebarMenuButton size="lg" asChild>
@@ -43,11 +43,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 					</SidebarMenuItem>
 				</SidebarMenu>
 			</SidebarHeader>
-			<SidebarContent>
+			<SidebarContent className="bg-background">
 				<SidebarNavMain data={sidebarDataNavMain} />
 				<SidebarNavGroups data={sidebarDataNavGroups} />
 			</SidebarContent>
-			<SidebarFooter>
+			<SidebarFooter className="bg-background">
 				<SidebarNavUser user={user} />
 			</SidebarFooter>
 			<SidebarRail />
