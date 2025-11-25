@@ -23,10 +23,10 @@ export default function DashboardLayout() {
 		<div className="[--header-height:calc(--spacing(14))]">
 			<SidebarProvider className="flex flex-col">
 				<AppHeader />
-				<div className="flex flex-1">
+				<div className="flex flex-1 overflow-hidden">
 					<AppSidebar />
 					<SidebarInset>
-						<div className="flex flex-1 flex-col gap-4 p-4 md:p-10">
+						<div className="flex flex-1 flex-col gap-4 p-4 md:p-10 min-h-0">
 							<Outlet />
 						</div>
 					</SidebarInset>
