@@ -1,4 +1,4 @@
-import PageHeader from '@/components/page-header';
+import PageHeader from '@/components/layout/dashboard/page-header'
 
 export default function CategoriesPage() {
 	return (
@@ -11,5 +11,5 @@ export default function CategoriesPage() {
 
 			<h2>Hello</h2>
 		</>
-	);
+	)
 }

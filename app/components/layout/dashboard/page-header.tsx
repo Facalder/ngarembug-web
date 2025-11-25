@@ -1,15 +1,15 @@
-'use client';
+'use client'
 
-import { Plus } from 'lucide-react';
-import { useNavigate } from 'react-router';
-import { Button } from '@/components/ui/button';
+import { Plus } from 'lucide-react'
+import { useNavigate } from 'react-router'
+import { Button } from '@/components/ui/button'
 
 interface PageHeaderProps {
-	title: string;
-	description?: string;
-	entries?: number;
-	createLink?: string;
-	createLabel?: string;
+	title: string
+	description?: string
+	entries?: number
+	createLink?: string
+	createLabel?: string
 }
 
 export default function PageHeader({
@@ -19,7 +19,7 @@ export default function PageHeader({
 	createLink,
 	createLabel = 'Create new entry',
 }: PageHeaderProps) {
-	const navigate = useNavigate();
+	const navigate = useNavigate()
 
 	return (
 		<div className="mb-2">
@@ -46,5 +46,5 @@ export default function PageHeader({
 				)}
 			</div>
 		</div>
-	);
+	)
 }

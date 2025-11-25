@@ -7,18 +7,18 @@ import {
 	Search,
 	TagIcon,
 	Wifi,
-} from 'lucide-react';
+} from 'lucide-react'
 import type {
 	NavItems,
 	SidebarData,
 	User,
-} from '@/features/dashboard/types/sidebar-type';
+} from '@/components/layout/types/sidebar-type'
 
 export const user: User = {
 	name: 'Najla',
 	email: 'najlaaisy@gmail.com',
 	avatar: '',
-};
+}
 
 export const sidebarDataNavMain: NavItems[] = [
 	{
@@ -37,7 +37,7 @@ export const sidebarDataNavMain: NavItems[] = [
 		icon: Inbox,
 		badge: 5,
 	},
-];
+]
 
 export const sidebarDataNavGroups: SidebarData = {
 	navGroups: [
@@ -110,4 +110,4 @@ export const sidebarDataNavGroups: SidebarData = {
 			],
 		},
 	],
-};
+}

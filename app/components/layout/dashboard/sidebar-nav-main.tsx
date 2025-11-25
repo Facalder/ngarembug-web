@@ -1,14 +1,14 @@
-import { Link, useLocation } from 'react-router';
-import { Badge } from '@/components/ui/badge';
+import { Link, useLocation } from 'react-router'
+import type { NavItems } from '@/components/layout/types/sidebar-type'
+import { Badge } from '@/components/ui/badge'
 import {
 	SidebarMenu,
 	SidebarMenuButton,
 	SidebarMenuItem,
-} from '@/components/ui/sidebar';
-import type { NavItems } from '@/features/dashboard/types/sidebar-type';
+} from '@/components/ui/sidebar'
 
 export default function SidebarNavMain({ data }: { data: NavItems[] }) {
-	const location = useLocation();
+	const location = useLocation()
 
 	return (
 		<>
@@ -47,5 +47,5 @@ export default function SidebarNavMain({ data }: { data: NavItems[] }) {
 				</SidebarMenu>
 			))}
 		</>
-	);
+	)
 }

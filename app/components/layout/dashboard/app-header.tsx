@@ -1,4 +1,4 @@
-import { SidebarIcon } from 'lucide-react';
+import { SidebarIcon } from 'lucide-react'
 import {
 	Breadcrumb,
 	BreadcrumbItem,
@@ -6,13 +6,13 @@ import {
 	BreadcrumbList,
 	BreadcrumbPage,
 	BreadcrumbSeparator,
-} from '@/components/ui/breadcrumb';
-import { Button } from '@/components/ui/button';
-import { Separator } from '@/components/ui/separator';
-import { useSidebar } from '@/components/ui/sidebar';
+} from '@/components/ui/breadcrumb'
+import { Button } from '@/components/ui/button'
+import { Separator } from '@/components/ui/separator'
+import { useSidebar } from '@/components/ui/sidebar'
 
 export function AppHeader() {
-	const { toggleSidebar } = useSidebar();
+	const { toggleSidebar } = useSidebar()
 
 	return (
 		<header className="bg-background sticky top-0 z-50 flex w-full items-center border-b">
@@ -41,5 +41,5 @@ export function AppHeader() {
 				</Breadcrumb>
 			</div>
 		</header>
-	);
+	)
 }

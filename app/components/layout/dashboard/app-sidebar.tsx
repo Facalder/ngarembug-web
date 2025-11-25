@@ -1,9 +1,14 @@
-import { Command } from 'lucide-react';
-import type * as React from 'react';
-import { Link } from 'react-router';
-import SidebarNavGroups from '@/components/sidebar-nav-groups';
-import SidebarNavMain from '@/components/sidebar-nav-main';
-import SidebarNavUser from '@/components/sidebar-nav-user';
+import { Command } from 'lucide-react'
+import type * as React from 'react'
+import { Link } from 'react-router'
+import SidebarNavGroups from '@/components/layout/dashboard/sidebar-nav-groups'
+import SidebarNavMain from '@/components/layout/dashboard/sidebar-nav-main'
+import SidebarNavUser from '@/components/layout/dashboard/sidebar-nav-user'
+import {
+	sidebarDataNavGroups,
+	sidebarDataNavMain,
+	user,
+} from '@/components/layout/data/sidebar-data'
 import {
 	Sidebar,
 	SidebarContent,
@@ -13,12 +18,7 @@ import {
 	SidebarMenuButton,
 	SidebarMenuItem,
 	SidebarRail,
-} from '@/components/ui/sidebar';
-import {
-	sidebarDataNavGroups,
-	sidebarDataNavMain,
-	user,
-} from '@/features/dashboard/data/sidebar-data';
+} from '@/components/ui/sidebar'
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 	return (
@@ -52,5 +52,5 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 			</SidebarFooter>
 			<SidebarRail />
 		</Sidebar>
-	);
+	)
 }

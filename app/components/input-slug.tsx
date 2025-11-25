@@ -1,8 +1,8 @@
-import type * as React from 'react';
-import { cn } from '@/lib/utils';
+import type * as React from 'react'
+import { cn } from '@/lib/utils'
 
 interface InputSlugProps extends React.ComponentProps<'input'> {
-	value: string;
+	value: string
 }
 
 export function InputSlug({
@@ -16,9 +16,9 @@ export function InputSlug({
 			.toLowerCase()
 			.trim()
 			.replace(/[\s\W-]+/g, '-')
-			.replace(/^-+|-+$/g, '');
+			.replace(/^-+|-+$/g, '')
 
-	const slug = generateSlug(value);
+	const slug = generateSlug(value)
 
 	return (
 		<input
@@ -31,5 +31,5 @@ export function InputSlug({
 			)}
 			{...props}
 		/>
-	);
+	)
 }

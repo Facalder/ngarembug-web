@@ -1,11 +1,12 @@
-import { MoreHorizontal } from 'lucide-react';
-import { Link, useLocation } from 'react-router';
+import { MoreHorizontal } from 'lucide-react'
+import { Link, useLocation } from 'react-router'
+import type { SidebarData } from '@/components/layout/types/sidebar-type'
 import {
 	DropdownMenu,
 	DropdownMenuContent,
 	DropdownMenuItem,
 	DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+} from '@/components/ui/dropdown-menu'
 import {
 	SidebarGroup,
 	SidebarGroupLabel,
@@ -14,12 +15,11 @@ import {
 	SidebarMenuButton,
 	SidebarMenuItem,
 	useSidebar,
-} from '@/components/ui/sidebar';
-import type { SidebarData } from '@/features/dashboard/types/sidebar-type';
+} from '@/components/ui/sidebar'
 
 export default function SidebarNavGroups({ data }: { data: SidebarData }) {
-	const location = useLocation();
-	const { isMobile } = useSidebar();
+	const location = useLocation()
+	const { isMobile } = useSidebar()
 
 	return (
 		<>
@@ -32,8 +32,8 @@ export default function SidebarNavGroups({ data }: { data: SidebarData }) {
 
 					<SidebarMenu>
 						{group.items.map((item) => {
-							const isActive = item.to === location.pathname;
-							const hasChildren = item.children && item.children.length > 0;
+							const isActive = item.to === location.pathname
+							const hasChildren = item.children && item.children.length > 0
 
 							if (!hasChildren) {
 								return (
@@ -49,7 +49,7 @@ export default function SidebarNavGroups({ data }: { data: SidebarData }) {
 											</Link>
 										</SidebarMenuButton>
 									</SidebarMenuItem>
-								);
+								)
 							}
 
 							return (
@@ -92,11 +92,11 @@ export default function SidebarNavGroups({ data }: { data: SidebarData }) {
 										</DropdownMenuContent>
 									</DropdownMenu>
 								</SidebarMenuItem>
-							);
+							)
 						})}
 					</SidebarMenu>
 				</SidebarGroup>
 			))}
 		</>
-	);
+	)
 }
