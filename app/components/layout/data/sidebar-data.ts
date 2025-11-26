@@ -44,63 +44,20 @@ export const sidebarDataNavGroups: SidebarData = {
 		{
 			title: 'Collections',
 			items: [
-				// {
-				// 	title: 'Cafe',
-				// 	to: '/dashboard/collections/cafes',
-				// 	icon: Store,
-				// 	children: [
-				// 		{
-				// 			title: 'Cafe List',
-				// 			to: '/dashboard/collections/cafes',
-				// 			icon: Plus,
-				// 		},
-				// 		{
-				// 			title: 'Tambah Cafe Baru',
-				// 			to: '/dashboard/collections/cafes/new',
-				// 			icon: Plus,
-				// 		},
-				// 	],
-				// },
 				{
 					title: 'Kategori',
 					to: '/dashboard/collections/categories',
 					icon: TagIcon,
-					children: [
-						{
-							title: 'Kategori baru',
-							to: '/collections/categories/new',
-							icon: Plus,
-						},
-					],
 				},
 				{
 					title: 'Fasilitias',
 					to: '/dashboard/collections/facilities',
 					icon: Wifi,
-					children: [
-						{
-							title: 'Fasilitas baru',
-							to: '/dashboard/collections/facilities/new',
-							icon: Plus,
-						},
-						{
-							title: 'Fasilitas baru',
-							to: '/dashboard/collections/facilities/new',
-							icon: Plus,
-						},
-					],
 				},
 				{
 					title: 'Lokasi',
 					to: '/collections/lokasi',
 					icon: MapIcon,
-					children: [
-						{
-							title: 'Add Lokasi',
-							to: '/collections/lokasi/new',
-							icon: Plus,
-						},
-					],
 				},
 				{
 					title: 'Tipe Cafe',

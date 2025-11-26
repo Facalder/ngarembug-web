@@ -12,6 +12,11 @@ export default [
 					'/categories',
 					'routes/dashboard/collections/categories/_index.tsx',
 				),
+
+				t.route(
+					'/facilities',
+					'routes/dashboard/collections/facilities/_index.tsx',
+				),
 			]),
 		]),
 	]),

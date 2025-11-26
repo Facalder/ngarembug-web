@@ -9,9 +9,9 @@ export default function CategoriesPage() {
 		<CategoriesProvider>
 			<div className="mb-4 flex items-center justify-between flex-wrap gap-4">
 				<div className="space-y-2">
-					<h1 className="text-3xl font-semibold">Category Page</h1>
+					<h1 className="text-3xl font-bold">Kategori Kafe</h1>
 					<p className="text-muted-foreground">
-						Here's a list of your tasks for this month!
+						Kategori kafe untuk klasifikasikan tipe kafe
 					</p>
 				</div>
 

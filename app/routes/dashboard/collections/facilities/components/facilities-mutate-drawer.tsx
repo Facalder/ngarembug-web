@@ -23,31 +23,31 @@ import {
 	SheetTitle,
 } from '@/components/ui/sheet'
 import { Textarea } from '@/components/ui/textarea'
-import type { Category } from '@/schema/index'
+import type { Facility } from '@/schema/index'
 
-type CategoryMutateDrawerProps = {
+type FacilityMutateDrawerProps = {
 	open: boolean
 	onOpenChange: (open: boolean) => void
-	currentRow?: Category
+	currentRow?: Facility
 }
 
-const categoryFormSchema = z.object({
-	name: z.string().min(1, 'Masukan nama category'),
+const facilityFormSchema = z.object({
+	name: z.string().min(1, 'Masukan nama facility'),
 	slug: z.string().slugify(),
 	description: z.string(),
 })
 
-type CategoryForm = z.infer<typeof categoryFormSchema>
+type FacilityForm = z.infer<typeof facilityFormSchema>
 
-export default function CategoriesMutateDrawer({
+export default function FacilitiesMutateDrawer({
 	open,
 	onOpenChange,
 	currentRow,
-}: CategoryMutateDrawerProps) {
+}: FacilityMutateDrawerProps) {
 	const isUpdate = !!currentRow
 
-	const form = useForm<CategoryForm>({
-		resolver: zodResolver(categoryFormSchema),
+	const form = useForm<FacilityForm>({
+		resolver: zodResolver(facilityFormSchema),
 		defaultValues: currentRow ?? {
 			name: '',
 			slug: '',
@@ -55,7 +55,7 @@ export default function CategoriesMutateDrawer({
 		},
 	})
 
-	const onSubmit = (_data: CategoryForm) => {
+	const onSubmit = (_data: FacilityForm) => {
 		onOpenChange(false)
 		form.reset()
 	}
@@ -76,18 +76,18 @@ export default function CategoriesMutateDrawer({
 		>
 			<SheetContent className="flex flex-col">
 				<SheetHeader className="text-start">
-					<SheetTitle>{isUpdate ? 'Edit' : 'Tambah'} Kategori</SheetTitle>
+					<SheetTitle>{isUpdate ? 'Edit' : 'Tambah'} Fasilitas</SheetTitle>
 					<SheetDescription>
 						{isUpdate
-							? 'Sesuaikan kategori cafe.'
-							: 'Masukan kategori baru.'}
+							? 'Sesuaikan fasilitas cafe.'
+							: 'Masukan fasilitas baru.'}
 						Tekan save untuk menyimpan atau draft untuk simpan ke draft
 					</SheetDescription>
 				</SheetHeader>
 
 				<Form {...form}>
 					<form
-						id="category-form"
+						id="facility-form"
 						onSubmit={form.handleSubmit(onSubmit)}
 						className="flex-1 space-y-6 overflow-y-auto px-4"
 					>
@@ -96,11 +96,11 @@ export default function CategoriesMutateDrawer({
 							name="name"
 							render={({ field }) => (
 								<FormItem>
-									<FormLabel>Nama kategori</FormLabel>
+									<FormLabel>Nama fasilitas</FormLabel>
 									<FormControl>
 										<Input
 											{...field}
-											placeholder="Masukan nama kategori cafe"
+											placeholder="Masukan nama fasilitas cafe"
 											type="text"
 										/>
 									</FormControl>
@@ -118,7 +118,7 @@ export default function CategoriesMutateDrawer({
 									<FormControl>
 										<InputSlug
 											{...field}
-											placeholder="Auto generate dari nama kategori "
+											placeholder="Auto generate dari nama fasilitas"
 											type="text"
 											readOnly
 											disabled
@@ -134,11 +134,11 @@ export default function CategoriesMutateDrawer({
 							name="description"
 							render={({ field }) => (
 								<FormItem>
-									<FormLabel>Deskripsi kategori</FormLabel>
+									<FormLabel>Deskripsi fasilitas</FormLabel>
 									<FormControl>
 										<Textarea
 											{...field}
-											placeholder="Deskripsikan kategori kafe"
+											placeholder="Deskripsikan fasilitas kafe"
 										/>
 									</FormControl>
 									<FormMessage />
@@ -153,8 +153,8 @@ export default function CategoriesMutateDrawer({
 						<Button variant="secondary">Simpan ke draft</Button>
 					</SheetClose>
 
-					<Button form="categories-form" type="submit">
-						Tambah kategori
+					<Button form="facilities-form" type="submit">
+						Tambah fasilitas
 					</Button>
 				</SheetFooter>
 			</SheetContent>

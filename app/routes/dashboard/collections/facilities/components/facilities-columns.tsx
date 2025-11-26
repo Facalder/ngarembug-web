@@ -3,20 +3,25 @@ import { DataTableColumnHeader } from '@/components/data-table'
 import { Badge } from '@/components/ui/badge'
 import { Checkbox } from '@/components/ui/checkbox'
 import { formatDate, formatRelative } from '@/lib/date'
-import DataTableRowActions from '@/routes/dashboard/collections/categories/components/data-table-row-actions'
-import type { Category } from '@/schema'
+import DataTableRowActions from '@/routes/dashboard/collections/facilities/components/data-table-row-actions'
+import type { Facility } from '@/schema'
 
-// STATUS BADGE MAPPING
 const statusMap: Record<string, { label: string; color: string }> = {
-	draft: { label: 'Draft', color: 'bg-yellow-500/20 text-yellow-600' },
-	published: { label: 'Published', color: 'bg-green-500/20 text-green-600' },
+	draft: {
+		label: 'Draft',
+		color: 'bg-yellow-500/20 text-yellow-600',
+	},
+	published: {
+		label: 'Published',
+		color: 'bg-green-500/20 text-green-600',
+	},
 	archived: {
 		label: 'Archived',
 		color: 'bg-stone-500/20 text-muted-foreground',
 	},
 }
 
-export const categoriesColumns: ColumnDef<Category>[] = [
+export const facilitiesColumns: ColumnDef<Facility>[] = [
 	{
 		id: 'select',
 		size: 40,
@@ -62,7 +67,7 @@ export const categoriesColumns: ColumnDef<Category>[] = [
 		size: 200,
 		meta: { minSize: 150, maxSize: 260 },
 		header: ({ column }) => (
-			<DataTableColumnHeader column={column} title="Nama Kategori" />
+			<DataTableColumnHeader column={column} title="Nama Fasilitas" />
 		),
 		cell: ({ row }) => (
 			<span className="truncate block max-w-[200px]">

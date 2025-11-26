@@ -8,8 +8,8 @@ import {
 	DropdownMenuShortcut,
 	DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import { useCategories } from '@/routes/dashboard/collections/categories/components/categories-provider'
-import { categorySchema } from '@/schema/zod/categoriesSchema'
+import { useFacilities } from '@/routes/dashboard/collections/facilities/components/facilities-provider'
+import { facilitySchema } from '@/schema/zod/facilitiesSchema'
 
 type DataTableRowActionsProps<TData> = {
 	row: Row<TData>
@@ -18,9 +18,9 @@ type DataTableRowActionsProps<TData> = {
 export default function DataTableRowActions<TData>({
 	row,
 }: DataTableRowActionsProps<TData>) {
-	const category = categorySchema.parse(row.original)
+	const facility = facilitySchema.parse(row.original)
 
-	const { setOpen, setCurrentRow } = useCategories()
+	const { setOpen, setCurrentRow } = useFacilities()
 
 	return (
 		<DropdownMenu modal={false}>
@@ -36,7 +36,7 @@ export default function DataTableRowActions<TData>({
 			<DropdownMenuContent align="end" className="w-40">
 				<DropdownMenuItem
 					onClick={() => {
-						setCurrentRow(category)
+						setCurrentRow(facility)
 						setOpen('update')
 					}}
 				>
@@ -45,7 +45,7 @@ export default function DataTableRowActions<TData>({
 				<DropdownMenuItem
 					variant="destructive"
 					onClick={() => {
-						setCurrentRow(category)
+						setCurrentRow(facility)
 						setOpen('delete')
 					}}
 				>
