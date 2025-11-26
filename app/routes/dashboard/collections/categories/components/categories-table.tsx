@@ -32,7 +32,7 @@ type DataTableProps = {
 	data: Category[]
 }
 
-export function CategoriesTable({ data }: DataTableProps) {
+export default function CategoriesTable({ data }: DataTableProps) {
 	const [searchParams] = useSearchParams()
 	const navigate = useNavigate()
 

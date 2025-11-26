@@ -15,7 +15,7 @@ const FacilitiesContext = React.createContext<FacilitiesContextType | null>(
 	null,
 )
 
-export function FacilitiesProvider({
+export default function FacilitiesProvider({
 	children,
 }: {
 	children: React.ReactNode

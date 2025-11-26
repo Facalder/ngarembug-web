@@ -1,7 +1,7 @@
 import FacilitiesDialogs from '@/routes/dashboard/collections/facilities/components/facilities-dialogs'
 import FacilitiesPrimaryButtons from '@/routes/dashboard/collections/facilities/components/facilities-primary-button'
-import { FacilitiesProvider } from '@/routes/dashboard/collections/facilities/components/facilities-provider'
-import { FacilitiesTable } from '@/routes/dashboard/collections/facilities/components/facilities-table'
+import FacilitiesProvider from '@/routes/dashboard/collections/facilities/components/facilities-provider'
+import FacilitiesTable from '@/routes/dashboard/collections/facilities/components/facilities-table'
 import { facilitiesData } from '@/routes/dashboard/collections/facilities/data/data-facilities'
 
 export default function FacilitiesPage() {

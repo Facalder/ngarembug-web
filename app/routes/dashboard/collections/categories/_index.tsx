@@ -1,6 +1,6 @@
 import CategoriesDialogs from '@/routes/dashboard/collections/categories/components/categories-dialogs'
-import { CategoriesProvider } from '@/routes/dashboard/collections/categories/components/categories-provider'
-import { CategoriesTable } from '@/routes/dashboard/collections/categories/components/categories-table'
+import CategoriesProvider from '@/routes/dashboard/collections/categories/components/categories-provider'
+import CategoriesTable from '@/routes/dashboard/collections/categories/components/categories-table'
 import CategoryPrimaryButtons from '@/routes/dashboard/collections/categories/components/category-primary-button'
 import { categoriesData } from '@/routes/dashboard/collections/categories/data/data-categories'
 

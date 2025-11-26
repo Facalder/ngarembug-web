@@ -1,8 +1,8 @@
 import { SidebarIcon } from 'lucide-react'
+import DashboardBreadcrumb from '@/components/dashboard-breadcrumb'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { useSidebar } from '@/components/ui/sidebar'
-import DashboardBreadcrumb from '@/components/dashboard-breadcrumb'
 
 export function AppHeader() {
 	const { toggleSidebar } = useSidebar()

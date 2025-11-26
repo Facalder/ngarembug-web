@@ -32,7 +32,7 @@ type DataTableProps = {
 	data: Facility[]
 }
 
-export function FacilitiesTable({ data }: DataTableProps) {
+export default function FacilitiesTable({ data }: DataTableProps) {
 	const [searchParams] = useSearchParams()
 	const navigate = useNavigate()
 

@@ -15,7 +15,7 @@ const CategoriesContext = React.createContext<CategoriesContextType | null>(
 	null,
 )
 
-export function CategoriesProvider({
+export default function CategoriesProvider({
 	children,
 }: {
 	children: React.ReactNode
