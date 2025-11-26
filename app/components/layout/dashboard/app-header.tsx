@@ -19,7 +19,7 @@ export function AppHeader() {
 					<SidebarIcon />
 				</Button>
 				<Separator orientation="vertical" className="mr-2 h-4" />
-				<DashboardBreadcrumb/>
+				<DashboardBreadcrumb />
 			</div>
 		</header>
 	)

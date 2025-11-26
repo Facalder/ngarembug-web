@@ -10,9 +10,7 @@ export default function CategoriesPage() {
 			<div className="mb-4 flex items-center justify-between flex-wrap gap-4">
 				<div className="space-y-2">
 					<h1 className="text-3xl font-bold">Kategori Kafe</h1>
-					<p className="text-muted-foreground">
-						Daftar kategori kafe
-					</p>
+					<p className="text-muted-foreground">Daftar kategori kafe</p>
 				</div>
 
 				<CategoryPrimaryButtons />
