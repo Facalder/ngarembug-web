@@ -3,7 +3,6 @@ import {
 	Home,
 	Inbox,
 	MapIcon,
-	Plus,
 	Search,
 	TagIcon,
 	Wifi,

@@ -2,7 +2,7 @@ import FacilitiesDialogs from '@/routes/dashboard/collections/facilities/compone
 import FacilitiesPrimaryButtons from '@/routes/dashboard/collections/facilities/components/facilities-primary-button'
 import { FacilitiesProvider } from '@/routes/dashboard/collections/facilities/components/facilities-provider'
 import { FacilitiesTable } from '@/routes/dashboard/collections/facilities/components/facilities-table'
-import { facilitiesData } from '@/routes/dashboard/collections/facilities/data/facilities'
+import { facilitiesData } from '@/routes/dashboard/collections/facilities/data/data-facilities'
 
 export default function FacilitiesPage() {
 	return (
@@ -10,9 +10,7 @@ export default function FacilitiesPage() {
 			<div className="mb-4 flex items-center justify-between flex-wrap gap-4">
 				<div className="space-y-2">
 					<h1 className="text-3xl font-bold">Fasilitas Kafe</h1>
-					<p className="text-muted-foreground">
-						Fasilitas pada sebuah kafe
-					</p>
+					<p className="text-muted-foreground">Fasilitas pada sebuah kafe</p>
 				</div>
 
 				<FacilitiesPrimaryButtons />

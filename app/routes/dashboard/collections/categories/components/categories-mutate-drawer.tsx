@@ -78,9 +78,7 @@ export default function CategoriesMutateDrawer({
 				<SheetHeader className="text-start">
 					<SheetTitle>{isUpdate ? 'Edit' : 'Tambah'} Kategori</SheetTitle>
 					<SheetDescription>
-						{isUpdate
-							? 'Sesuaikan kategori cafe.'
-							: 'Masukan kategori baru.'}
+						{isUpdate ? 'Sesuaikan kategori cafe.' : 'Masukan kategori baru.'}
 						Tekan save untuk menyimpan atau draft untuk simpan ke draft
 					</SheetDescription>
 				</SheetHeader>

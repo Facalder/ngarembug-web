@@ -1,4 +1,5 @@
 import type { ColumnDef } from '@tanstack/react-table'
+import { Archive, CheckCircle2, Circle } from 'lucide-react'
 import { DataTableColumnHeader } from '@/components/data-table'
 import { Badge } from '@/components/ui/badge'
 import { Checkbox } from '@/components/ui/checkbox'
@@ -6,18 +7,24 @@ import { formatDate, formatRelative } from '@/lib/date'
 import DataTableRowActions from '@/routes/dashboard/collections/facilities/components/data-table-row-actions'
 import type { Facility } from '@/schema'
 
-const statusMap: Record<string, { label: string; color: string }> = {
+const statusMap: Record<
+	string,
+	{ label: string; color: string; icon: React.ElementType }
+> = {
 	draft: {
 		label: 'Draft',
-		color: 'bg-yellow-500/20 text-yellow-600',
+		color: 'bg-yellow-500/20 text-yellow-700',
+		icon: Circle,
 	},
 	published: {
 		label: 'Published',
-		color: 'bg-green-500/20 text-green-600',
+		color: 'bg-green-500/20 text-green-700',
+		icon: CheckCircle2,
 	},
 	archived: {
 		label: 'Archived',
-		color: 'bg-stone-500/20 text-muted-foreground',
+		color: 'bg-gray-500/20 text-gray-700',
+		icon: Archive,
 	},
 }
 
@@ -107,8 +114,11 @@ export const facilitiesColumns: ColumnDef<Facility>[] = [
 
 			if (!item) return null
 
+			const Icon = item.icon
+
 			return (
 				<Badge className={`${item.color} rounded-md font-medium`}>
+					<Icon className="w-4 h-4" />
 					{item.label}
 				</Badge>
 			)

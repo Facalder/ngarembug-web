@@ -25,8 +25,8 @@ import { useTableUrlState } from '@/hooks/use-table-url'
 import { cn } from '@/lib/utils'
 // import { DataTableBulkActions } from './data-table-bulk-actions'
 import { facilitiesColumns as columns } from '@/routes/dashboard/collections/facilities/components/facilities-columns'
+import { statuses } from '@/routes/dashboard/data/filter-data'
 import type { Facility } from '@/schema'
-import { statuses } from '../data/data'
 
 type DataTableProps = {
 	data: Facility[]

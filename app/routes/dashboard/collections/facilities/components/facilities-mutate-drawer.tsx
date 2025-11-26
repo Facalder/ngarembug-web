@@ -78,9 +78,7 @@ export default function FacilitiesMutateDrawer({
 				<SheetHeader className="text-start">
 					<SheetTitle>{isUpdate ? 'Edit' : 'Tambah'} Fasilitas</SheetTitle>
 					<SheetDescription>
-						{isUpdate
-							? 'Sesuaikan fasilitas cafe.'
-							: 'Masukan fasilitas baru.'}
+						{isUpdate ? 'Sesuaikan fasilitas cafe.' : 'Masukan fasilitas baru.'}
 						Tekan save untuk menyimpan atau draft untuk simpan ke draft
 					</SheetDescription>
 				</SheetHeader>

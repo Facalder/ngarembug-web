@@ -26,7 +26,7 @@ import { cn } from '@/lib/utils'
 // import { DataTableBulkActions } from './data-table-bulk-actions'
 import { categoriesColumns as columns } from '@/routes/dashboard/collections/categories/components/categories-columns'
 import type { Category } from '@/schema'
-import { statuses } from '../data/data'
+import { statuses } from '../../../data/filter-data'
 
 type DataTableProps = {
 	data: Category[]

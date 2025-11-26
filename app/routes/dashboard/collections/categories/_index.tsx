@@ -2,7 +2,7 @@ import CategoriesDialogs from '@/routes/dashboard/collections/categories/compone
 import { CategoriesProvider } from '@/routes/dashboard/collections/categories/components/categories-provider'
 import { CategoriesTable } from '@/routes/dashboard/collections/categories/components/categories-table'
 import CategoryPrimaryButtons from '@/routes/dashboard/collections/categories/components/category-primary-button'
-import { categoriesData } from '@/routes/dashboard/collections/categories/data/categories'
+import { categoriesData } from '@/routes/dashboard/collections/categories/data/data-categories'
 
 export default function CategoriesPage() {
 	return (
