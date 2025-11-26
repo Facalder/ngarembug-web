@@ -6,6 +6,7 @@ export const facilitySchema = z.object({
 	slug: z.string(),
 	description: z.string(),
 	status: z.enum(['published', 'draft', 'archived']),
+	
 	updatedAt: z.iso.datetime(),
 	createdAt: z.iso.datetime(),
 })

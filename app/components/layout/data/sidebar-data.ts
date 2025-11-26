@@ -1,11 +1,18 @@
 import {
-	Blocks,
+	Bolt,
+	HeartHandshake,
 	Home,
 	Inbox,
-	MapIcon,
+	LocateFixed,
+	MapPinHouse,
 	Search,
+	Settings,
+	Sofa,
+	Star,
+	Store,
 	TagIcon,
-	Wifi,
+	UserStar,
+	Users,
 } from 'lucide-react'
 import type {
 	NavItems,
@@ -41,27 +48,72 @@ export const sidebarDataNavMain: NavItems[] = [
 export const sidebarDataNavGroups: SidebarData = {
 	navGroups: [
 		{
-			title: 'Collections',
+			title: 'Data Kafe',
 			items: [
+				{
+					title: 'Kafe',
+					to: '/dashboard/collections/cafes',
+					icon: Store,
+				},
+				{
+					title: 'Area Kafe',
+					to: '/dashboard/collections/areas',
+					icon: LocateFixed,
+				},
+				{
+					title: 'Alamat Kafe',
+					to: '/dashboard/collections/addresses',
+					icon: MapPinHouse,
+				},
 				{
 					title: 'Kategori',
 					to: '/dashboard/collections/categories',
 					icon: TagIcon,
 				},
 				{
-					title: 'Fasilitias',
+					title: 'Fasilitas',
 					to: '/dashboard/collections/facilities',
-					icon: Wifi,
+					icon: Sofa,
 				},
 				{
-					title: 'Lokasi',
-					to: '/collections/lokasi',
-					icon: MapIcon,
+					title: 'Syarat dan Ketentuan',
+					to: '/dashboard/collections/terms',
+					icon: HeartHandshake,
+				},
+			],
+		},
+		{
+			title: 'Users',
+			items: [
+				{
+					title: 'User',
+					to: '/dashboard/collections/users',
+					icon: Users,
 				},
 				{
-					title: 'Tipe Cafe',
+					title: 'Preferensi User',
 					to: '/collections/tipe-cafe',
-					icon: Blocks,
+					icon: Bolt,
+				},
+				{
+					title: 'Rekemendasi User',
+					to: '/dashboard/collections/user-recommendations',
+					icon: Star,
+				},
+				{
+					title: 'Review Kafe',
+					to: '/dashboard/collections/cafe-reviews',
+					icon: UserStar,
+				},
+			],
+		},
+		{
+			title: 'Settings',
+			items: [
+				{
+					title: 'Dashboard Settings',
+					to: '/dashboard/settings',
+					icon: Settings,
 				},
 			],
 		},

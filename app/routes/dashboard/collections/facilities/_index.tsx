@@ -10,7 +10,7 @@ export default function FacilitiesPage() {
 			<div className="mb-4 flex items-center justify-between flex-wrap gap-4">
 				<div className="space-y-2">
 					<h1 className="text-3xl font-bold">Fasilitas Kafe</h1>
-					<p className="text-muted-foreground">Fasilitas pada sebuah kafe</p>
+					<p className="text-muted-foreground">Daftar fasilitas kafe</p>
 				</div>
 
 				<FacilitiesPrimaryButtons />

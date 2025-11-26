@@ -11,7 +11,7 @@ export default function CategoriesPage() {
 				<div className="space-y-2">
 					<h1 className="text-3xl font-bold">Kategori Kafe</h1>
 					<p className="text-muted-foreground">
-						Kategori kafe untuk klasifikasikan tipe kafe
+						Daftar kategori kafe
 					</p>
 				</div>
 
