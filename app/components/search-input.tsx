@@ -1,7 +1,6 @@
+import { Search } from 'lucide-react';
+import type React from 'react';
 import { Input } from '@/components/ui/input';
-import { cn } from '@/lib/utils';
-import { Search, Sparkle } from 'lucide-react';
-import React from 'react';
 
 export default function SearchInput({
 	className,

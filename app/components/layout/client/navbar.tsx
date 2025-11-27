@@ -1,17 +1,11 @@
+import { Menu, Search, X } from 'lucide-react';
 import { useState } from 'react';
+import { Link } from 'react-router';
 import {
 	clientNavbarInfoItems,
 	clientNavbarMainItems,
 } from '@/components/layout/data/client-navbar-data';
-import { Link } from 'react-router';
-import { Search, Menu, X, ChevronDown, Settings } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import {
-	DropdownMenu,
-	DropdownMenuContent,
-	DropdownMenuItem,
-	DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
 import { Input } from '@/components/ui/input';
 import { Separator } from '@/components/ui/separator';
 
@@ -19,7 +13,7 @@ export default function ClientNavbar() {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
-		<nav className="top-0 left-0 sticky bg-white border-b">
+		<nav className="top-0 left-0 z-40 sticky bg-white border-b">
 			<div className="hidden lg:block bg-stone-50">
 				<div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
 					<div className="flex justify-end items-center gap-6 h-10">
