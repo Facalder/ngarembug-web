@@ -1,4 +1,4 @@
-import CafeCategoriesCard from '@/components/cafe-categories-card';
+import CafeCategoriesCard from '@/components/cafe-categories-card'
 
 export default function CafeCategoriesSection() {
 	return (
@@ -11,5 +11,5 @@ export default function CafeCategoriesSection() {
 				<CafeCategoriesCard />
 			</div>
 		</section>
-	);
+	)
 }

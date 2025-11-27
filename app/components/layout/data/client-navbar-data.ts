@@ -1,13 +1,13 @@
 import type {
 	NavbarItems,
 	User,
-} from '@/components/layout/types/client-navbar-type';
+} from '@/components/layout/types/client-navbar-type'
 
 export const clientUser: User = {
 	name: '',
 	email: '',
 	image: '',
-};
+}
 
 export const clientNavbarMainItems: NavbarItems[] = [
 	{
@@ -26,7 +26,7 @@ export const clientNavbarMainItems: NavbarItems[] = [
 		title: 'Private Room',
 		to: '/private-room',
 	},
-];
+]
 
 export const clientNavbarInfoItems: NavbarItems[] = [
 	{
@@ -45,4 +45,4 @@ export const clientNavbarInfoItems: NavbarItems[] = [
 		title: 'Jadi Partner ngarembug',
 		to: '/become-partner',
 	},
-];
+]

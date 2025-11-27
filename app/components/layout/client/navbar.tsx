@@ -1,16 +1,16 @@
-import { Menu, Search, X } from 'lucide-react';
-import { useState } from 'react';
-import { Link } from 'react-router';
+import { Menu, Search, X } from 'lucide-react'
+import { useState } from 'react'
+import { Link } from 'react-router'
 import {
 	clientNavbarInfoItems,
 	clientNavbarMainItems,
-} from '@/components/layout/data/client-navbar-data';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Separator } from '@/components/ui/separator';
+} from '@/components/layout/data/client-navbar-data'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Separator } from '@/components/ui/separator'
 
 export default function ClientNavbar() {
-	const [isOpen, setIsOpen] = useState(false);
+	const [isOpen, setIsOpen] = useState(false)
 
 	return (
 		<nav className="top-0 left-0 z-40 sticky bg-white border-b">
@@ -153,5 +153,5 @@ export default function ClientNavbar() {
 				)}
 			</div>
 		</nav>
-	);
+	)
 }

@@ -1,6 +1,6 @@
-import { AirVentIcon } from 'lucide-react';
-import { Link } from 'react-router';
-import { Badge } from '@/components/ui/badge';
+import { AirVentIcon } from 'lucide-react'
+import { Link } from 'react-router'
+import { Badge } from '@/components/ui/badge'
 import {
 	Card,
 	CardContent,
@@ -8,7 +8,7 @@ import {
 	CardFooter,
 	CardHeader,
 	CardTitle,
-} from '@/components/ui/card';
+} from '@/components/ui/card'
 
 export default function CafeCard() {
 	return (
@@ -90,5 +90,5 @@ export default function CafeCard() {
 				</CardFooter>
 			</Card>
 		</Link>
-	);
+	)
 }

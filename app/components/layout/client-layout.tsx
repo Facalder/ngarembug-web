@@ -1,5 +1,5 @@
-import { Outlet } from 'react-router';
-import ClientNavbar from '@/components/layout/client/navbar';
+import { Outlet } from 'react-router'
+import ClientNavbar from '@/components/layout/client/navbar'
 
 export default function ClientLayout() {
 	return (
@@ -9,5 +9,5 @@ export default function ClientLayout() {
 				<Outlet />
 			</main>
 		</>
-	);
+	)
 }

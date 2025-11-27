@@ -12,5 +12,5 @@ export default function CafeAreasCard() {
 				<p className="text-sm">20 tempat</p>
 			</div>
 		</div>
-	);
+	)
 }

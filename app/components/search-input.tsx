@@ -1,6 +1,6 @@
-import { Search } from 'lucide-react';
-import type React from 'react';
-import { Input } from '@/components/ui/input';
+import { Search } from 'lucide-react'
+import type React from 'react'
+import { Input } from '@/components/ui/input'
 
 export default function SearchInput({
 	className,
@@ -17,5 +17,5 @@ export default function SearchInput({
 				{...props}
 			/>
 		</div>
-	);
+	)
 }
